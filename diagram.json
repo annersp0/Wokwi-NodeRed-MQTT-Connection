@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "Cadavos-Morales-Petalcorin-Pulvera",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -148.9, "left": -33.8, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -234, "left": 128.6, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -160.8,
+      "left": 213,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -120.8,
+      "left": -189.78,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "led1:A", "uno:2", "green", [ "v0" ] ],
+    [ "bz1:2", "uno:10", "red", [ "v0" ] ],
+    [ "led1:C", "uno:GND.1", "black", [ "v52.04", "h-112.5" ] ],
+    [ "bz1:1", "uno:GND.1", "black", [ "v38.4", "h-28.8" ] ],
+    [ "pir1:GND", "uno:GND.2", "black", [ "v134.4", "h287.74" ] ],
+    [ "pir1:VCC", "uno:5V", "red", [ "v144", "h297.6" ] ],
+    [ "pir1:OUT", "uno:8", "green", [ "v124.8", "h105.46", "v-211.2", "h192" ] ],
+    [ "esp:VIN", "pir1:VCC", "red", [ "h0" ] ],
+    [ "pir1:OUT", "esp:D19", "green", [ "v19.2", "h95.86", "v-153.6", "h134.4", "v76.8" ] ],
+    [ "pir1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "led1:A", "esp:D5", "green", [ "v0" ] ],
+    [ "bz1:1", "esp:D18", "orange", [ "v0" ] ],
+    [ "bz1:2", "esp:D21", "magenta", [ "v28.8", "h-77.2", "v-48" ] ]
+  ],
+  "dependencies": {}
+}
