@@ -14,12 +14,12 @@ PubSubClient client(espClient);
 // ------------ Encapsulated Code; No changes needed ------------//
 
 const char *mqttServer = "mqtt.flespi.io";                                                  // MQTT Broker URL (no changes required)
-const char *mqtt_user = "CP3hVZnjoAip8sfq1NSdqe8jBqLIskBUXu1JjfQvDWKBcPQ3qy5HA3O0hnyzyXjj"; // Update with your Flespi token
+const char *mqtt_user = "CP3hVZnjoAip8sfq1NSdqe8jBqLIskBUXu1JjfQvDWKBcPQ3qy5HA3O0hnyzyXjj"; // Replace with your Flespi token
 const char *mqtt_password = "";                                                             // Enter your Flespi password (below the token)
 int port = 1883;                                                                            // MQTT port settings (do not modify)
 
-const char *topicFromNodered = "Lastname1/Lastname2/Lastname3/fromNodered"; // Replace with your last names
-const char *topicFromWokwi = "Lastname1/Lastname2/Lastname3/fromWokwi"; // Replace with your last names
+const char *topicFromNodered = "Cadavos/Morales/Petalcorin/Pulvera/fromNodered"; // Replace with your last names
+const char *topicFromWokwi = "Cadavos/Morales/Petalcorin/Pulvera/fromWokwi"; // Replace with your last names
 
 // Adjust based on your component connections
 const int PIRPin = 19; 
